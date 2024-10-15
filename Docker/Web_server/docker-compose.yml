@@ -20,14 +20,6 @@ services:
     volumes:
       - ./src:/var/www/html
 
-  mysql-db:
-    image: mysql:5.7
-    command: --default-authentication-plugin=mysql_native_password
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-    networks:
-      - internal
-
 networks:
   internal:
     driver: bridge
