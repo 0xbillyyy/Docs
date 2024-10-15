@@ -54,7 +54,7 @@ In the folder here edit docker-compose.yml as desired
 ```bash
 services:
   web:
-    container_name: web_server 
+    container_name: web_server (Here you can edit the container name)
     image: nginx:latest
     ports:
       - '8081:80' (Port from server 8080 to docker 80, you can modify the port from)
