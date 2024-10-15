@@ -45,6 +45,8 @@ Docker/
 
 #### 5.  Configuration `docker-compose.yml`
 
+In the folder here edit docker-compose.yml as desired
+
 ```bash
 services:
   web:
@@ -70,4 +72,18 @@ services:
       - internal
 ```
 
-#### 6. Up
+#### 6. Up and build docker
+
+```bash
+docker-compose up -d --build
+```
+
+
+
+---
+
+
+
+## 7. How to access
+
+Access your service at browser [Your IP/HOST]:[Port From Docker]
