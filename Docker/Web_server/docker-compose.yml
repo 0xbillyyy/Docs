@@ -1,4 +1,3 @@
-#version: '3.3'  # Pastikan untuk menambahkan ini
 
 services:
   web:
