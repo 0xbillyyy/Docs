@@ -1,2 +1,2 @@
 <?php
-echo "sip";
+echo phpinfo();
