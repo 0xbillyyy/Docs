@@ -1,4 +1,4 @@
-# Create Web Server With Docker
+# Create Web Server NGINX With Docker
 
 #### 1. Install Docker
 
@@ -13,7 +13,7 @@ sudo apt install docker-ce
 
 ```
 
-  Check your installation with command: 
+  Check your installation with command:
 
 ```bash
 sudo systemctl status docker
@@ -61,29 +61,20 @@ services:
       - ./default.conf:/etc/nginx/conf.d/default.conf
 ```
 
-```bash
-  mysql-db:
-    container_name: mysql-db (Your container name db)
-    image: mysql:5.7
-    command: --default-authentication-plugin=mysql_native_password
-    environment:
-      MYSQL_ROOT_PASSWORD: YOURPASSWORD (Change the password as desired)
-    networks:
-      - internal
-```
-
 #### 6. Up and build docker
 
 ```bash
 docker-compose up -d --build
 ```
 
-
+![1728989690440](image/README/1728989690440.png)
 
 ---
-
-
 
 ## 7. How to access
 
 Access your service at browser [Your IP/HOST]:[Port From Docker]
+
+example: `127.0.0.1:8080`
+
+![1728989795359](image/README/1728989795359.png)
