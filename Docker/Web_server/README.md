@@ -43,15 +43,15 @@ Docker/
     └── README.md
 ```
 
-#### 5.  Configuration Port Mapping
+#### 5.  Configuration `docker-compose.yml`
 
 ```bash
-
 services:
   web:
+    container_name: web_server 
     image: nginx:latest
     ports:
-      - '8080:80' (Port from server 8080 to docker 80, you can modify the port from)
+      - '8081:80' (Port from server 8080 to docker 80, you can modify the port from)
     networks:
       - internal
     volumes:
@@ -59,4 +59,15 @@ services:
       - ./default.conf:/etc/nginx/conf.d/default.conf
 ```
 
-#### 6. Up Docker
+```bash
+  mysql-db:
+    container_name: mysql-db (Your container name db)
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: YOURPASSWORD (Change the password as desired)
+    networks:
+      - internal
+```
+
+#### 6. Up
