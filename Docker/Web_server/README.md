@@ -1,4 +1,4 @@
-# Create Web Server NGINX With Docker
+# Creating an NGINX Web Server With Docker
 
 #### 1. Install Docker
 
@@ -13,7 +13,7 @@ sudo apt install docker-ce
 
 ```
 
-  Check your installation with command:
+Check your installation with the command:
 
 ```bash
 sudo systemctl status docker
