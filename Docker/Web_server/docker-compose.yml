@@ -1,9 +1,8 @@
-
 services:
   web:
     image: nginx:latest
     ports:
-      - '8080:80'
+      - '8081:80'
     networks:
       - internal
     volumes:
@@ -19,6 +18,14 @@ services:
       - internal
     volumes:
       - ./src:/var/www/html
+
+  mysql-db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - internal
 
 networks:
   internal:
